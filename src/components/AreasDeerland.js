@@ -22,7 +22,12 @@ export default function Nomina() {
 
   const columns = [
     { field: "ID_A", headerName: "ID", width: 50 },
-    { field: "Nombre_A", headerName: "Nombre Area", width: 110 }
+    {
+      field: 'Nombre_A',
+      headerName: 'Nombre Area',
+      width: 150,
+      editable: true,
+    }
   ];
 
   return (
