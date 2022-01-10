@@ -14,15 +14,15 @@ export default function Nomina() {
   useEffect(() => {
     const getAreasDeerland = async () => {
       const res = await axios.get('https://deerland-finanzas.herokuapp.com/areasdeerland');
-      const response = res.data.map(({ID_A, Nombre_A}) => ({Nombre_A, ID_A:ID_A}));
+      const response = res.data.map(({ID_A, Nombre_A}) => ({Nombre_A, id:ID_A}));
       setAreasDeerland(response);
     };
     getAreasDeerland();
   }, []);
 
   const columns = [
-    { field: "ID_A", headerName: "ID", width: 50 },
-    { field: "Nombre_A", headerName: "Nombre Area", width: 110 }
+    { field: "ID_A", headerName: "ID", width: 80 },
+    { field: "Nombre_A", headerName: "Nombre Area", width: 200 }
   ];
 
   return (
