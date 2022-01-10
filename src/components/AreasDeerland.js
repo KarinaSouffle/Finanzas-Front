@@ -9,7 +9,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
 
 export default function Nomina() {
-  const [horas, setAreasDeerland] = React.useState([]);
+  const [rows, setAreasDeerland] = React.useState([]);
 
   useEffect(() => {
     const getAreasDeerland = async () => {
@@ -45,7 +45,7 @@ export default function Nomina() {
           <br />
           <div style={{ height: 400, width: 1010 }}>
             <DataGrid
-              rows={horas}
+              rows={rows}
               columns={columns}
               pageSize={5}
               rowsPerPageOptions={[5]}
