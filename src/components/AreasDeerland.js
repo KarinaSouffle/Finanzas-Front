@@ -14,7 +14,7 @@ export default function Nomina() {
   useEffect(() => {
     const getAreasDeerland = async () => {
       const res = await axios.get('https://deerland-finanzas.herokuapp.com/areasdeerland');
-      const response = res.data.map(({ID_A, Nombre_A}) => ({Nombre_A, id:ID_A}));
+      const response = res.data.map(({ID_A, Nombre_A}) => ({Nombre_A, ID_A:ID_A}));
       setAreasDeerland(response);
     };
     getAreasDeerland();
