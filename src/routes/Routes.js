@@ -7,18 +7,20 @@ import Solicitud from "../components/Solicitud";
 import RevisarHoras from "../components/RevisarHoras";
 import RevisarSolicitud from "../components/RevisarSolicitud";
 import AreasDeerland from "../components/AreasDeerland";
+import Login2 from "../components/auth-signin";
 
 function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={AreasDeerland} />
+        <Route exact path="/" component={Login2} />
         <Route exact path="/menu" component={ButtonAppBar} />
         <Route exact path="/horas" component={Horas} />
-        <Route exact path="/nomina" component={AreasDeerland} />
+        <Route exact path="/areasdeerland" component={AreasDeerland} />
         <Route exact path="/revisarhoras" component={RevisarHoras} />
         <Route exact path="/solicitud" component={Solicitud} />
         <Route exact path="/revisarsolicitud" component={RevisarSolicitud} />
+        <Route exact path="/login" component={Login}/>
       </Switch>
     </BrowserRouter>
   );
