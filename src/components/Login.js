@@ -43,7 +43,6 @@ class Login extends Component {
           cookies.set("id", respuesta.id, { path: "/" });
           cookies.set("nombre", respuesta.nombre, { path: "/" });
           cookies.set("correo", respuesta.correo, { path: "/" });
-          alert("Bienvenido " + respuesta.nombre);
           window.location.href = "./menu";
         } else {
           alert("Credenciales no correctas");
@@ -62,15 +61,16 @@ class Login extends Component {
 
   render() {
     return (
+      <body style= "background-color: #d4e157;">
       <div className="containerPrincipal">
         <div className="containerSecundario">
           <div className="form-group">
             <Typography variant="h4" component="h4">
-              Bienvenido
+              Gestion de Recursos Financieros
             </Typography>
             <TextField
               id="outlined-basic"
-              label="Correo"
+              label="Usuario"
               variant="outlined"
               type="text"
               name="correo"
@@ -98,6 +98,7 @@ class Login extends Component {
           </div>
         </div>
       </div>
+      </body>
     );
   }
 }

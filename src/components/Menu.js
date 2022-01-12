@@ -22,7 +22,7 @@ class ButtonAppBar extends Component {
     cookies.remove("id", { path: "/" });
     cookies.remove("nombre", { path: "/" });
     cookies.remove("correo", { path: "/" });
-    alert("Adios");
+    //alert("Adios");
     window.location.href = "./";
   };
 
@@ -63,7 +63,7 @@ class ButtonAppBar extends Component {
               component="div"
               sx={{ flexGrow: 1, ml: 6 }}
             >
-              Empleados
+              Gestion de Recursos Financieros
             </Typography>
             <Button color="inherit" onClick={() => this.cerrarSesion()}>
               Logout
