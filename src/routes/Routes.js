@@ -8,6 +8,8 @@ import RevisarHoras from "../components/RevisarHoras";
 import RevisarSolicitud from "../components/RevisarSolicitud";
 import AreasDeerland from "../components/AreasDeerland";
 import SolicitudNomina from "../components/SolicitudNomina";
+import SolicitudRecursos from "../components/SolicitudRecursos";
+import VerTransacciones from "../components/VerTransacciones";
 
 function Routes() {
   return (
@@ -18,7 +20,8 @@ function Routes() {
         <Route exact path="/horas" component={Horas} />
         <Route exact path="/areasdeerland" component={AreasDeerland} />
         <Route exact path="/solicitud-nomina" component={SolicitudNomina} />
-        <Route exact path="/solicitud" component={Solicitud} />
+        <Route exact path="/solicitud-recursos" component={SolicitudRecursos} />
+        <Route exact path="/vertransacciones" component={VerTransacciones} />
         <Route exact path="/revisarsolicitud" component={RevisarSolicitud} />
       </Switch>
     </BrowserRouter>

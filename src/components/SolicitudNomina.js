@@ -20,10 +20,15 @@ export default function Nomina() {
   const columns = [
     { field: "id", headerName: "ID", width: 50 },
     {
-      field: 'Num_Nomina',
+      field: 'NumNomina',
       headerName: 'Numero de nomina',
       width: 150,
       editable: false,
+    },{
+        field: 'ID_A',
+        headerName: 'ID del area',
+        width: 150,
+        editable: false,
     },
     {
         field: 'Total_Horas_T',
@@ -49,7 +54,7 @@ export default function Nomina() {
         editable: false,
       },{
         field: 'ES_Solicitud_N',
-        headerName: 'Nombre Area',
+        headerName: 'Estado Solicitud',
         width: 150,
         editable: true,
       }
