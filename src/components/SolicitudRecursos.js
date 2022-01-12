@@ -20,11 +20,6 @@ export default function Recursos() {
   const columns = [
     { field: "id", headerName: "ID", width: 50 },
     {
-      field: 'NumNomina',
-      headerName: 'Numero de nomina',
-      width: 150,
-      editable: false,
-    },{
         field: 'ID_A',
         headerName: 'ID del area',
         width: 150,

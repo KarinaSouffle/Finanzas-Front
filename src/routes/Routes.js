@@ -3,8 +3,6 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Login from "../components/Login";
 import ButtonAppBar from "../components/Menu";
 import Horas from "../components/Horas";
-import Solicitud from "../components/Solicitud";
-import RevisarHoras from "../components/RevisarHoras";
 import RevisarSolicitud from "../components/RevisarSolicitud";
 import AreasDeerland from "../components/AreasDeerland";
 import SolicitudNomina from "../components/SolicitudNomina";

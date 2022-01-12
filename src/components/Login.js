@@ -6,7 +6,7 @@ import Cookies from "universal-cookie";
 import { Button, TextField, Typography } from "@mui/material";
 import { AccountCircle } from "@material-ui/icons";
 
-const baseUrl = "https://deerland-finanzas.herokuapp.com/Usuarios";
+const baseUrl = "https://deerland-finanzas.herokuapp.com/usuarios";
 const cookies = new Cookies();
 
 class Login extends Component {
