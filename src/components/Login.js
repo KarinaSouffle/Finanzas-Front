@@ -61,7 +61,7 @@ class Login extends Component {
 
   render() {
     return (
-      <body style= "background-color: #d4e157;">
+      <body>
       <div className="containerPrincipal">
         <div className="containerSecundario">
           <div className="form-group">
@@ -98,7 +98,6 @@ class Login extends Component {
           </div>
         </div>
       </div>
-      </body>
     );
   }
 }
