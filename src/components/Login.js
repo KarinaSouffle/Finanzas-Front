@@ -61,7 +61,6 @@ class Login extends Component {
 
   render() {
     return (
-      <body>
       <div className="containerPrincipal">
         <div className="containerSecundario">
           <div className="form-group">
