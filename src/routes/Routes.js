@@ -11,6 +11,7 @@ import VerTransacciones from "../components/VerTransacciones";
 import AgregarArea from "../components/AgregarArea";
 import AprobacionNomina from "../components/AprobacionNomina";
 import AprobacionRecursos from "../components/AprobacionRecursos";
+import Solicitud from "../components/Solicitud";
 
 function Routes() {
   return (
@@ -28,6 +29,7 @@ function Routes() {
         <Route exact path="/horas" component={Horas}/>
         <Route exact path ="/aprobacionnomina" component={AprobacionNomina}/>
         <Route exact path ="/aprobacionrecursos" component={AprobacionRecursos}/>
+        <Route exact path ="/solicitud"/>
       </Switch>
     </BrowserRouter>
   );

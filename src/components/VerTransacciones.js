@@ -18,7 +18,7 @@ export default function VerTransaccion() {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "ID", width: 50 },
+    { field: "id", headerName: "ID", width: 150 },
     {
       field: 'status',
       headerName: 'Estatus',
@@ -34,7 +34,7 @@ export default function VerTransaccion() {
     {
         field: 'ammount',
         headerName: 'Monto',
-        width: 150,
+        width: 100,
         editable: false,
     },
     {
