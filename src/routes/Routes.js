@@ -29,7 +29,7 @@ function Routes() {
         <Route exact path="/horas" component={Horas}/>
         <Route exact path ="/aprobacionnomina" component={AprobacionNomina}/>
         <Route exact path ="/aprobacionrecursos" component={AprobacionRecursos}/>
-        <Route exact path ="/solicitud"/>
+        <Route exact path ="/solicitud" component={Solicitud}/>
       </Switch>
     </BrowserRouter>
   );
