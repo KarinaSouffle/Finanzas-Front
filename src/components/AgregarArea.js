@@ -21,7 +21,7 @@ export default function Solicitud() {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "ID Empleado", width: 110 },
+    { field: "ID_A", headerName: "ID Empleado", width: 110 },
     { field: "Nombre_A", headerName: "Nombre", width: 180 },
     
   ];
@@ -63,13 +63,22 @@ export default function Solicitud() {
            />
               <br />
               <Button
-                color="secondary"
-                variant="contained"
-                startIcon={<Send />}
-                onClick={()=>{sendSolicitud(solicitud)}}
-              >
-                Enviar Area
-              </Button>
+            color="success"
+            variant="contained"
+            startIcon={<SaveSharp />}
+            onClick={async () => {
+              let rest = await axios.post(
+                "https://deerland-finanzas.herokuapp.com/agregararea",
+                {
+                  Nombre_A: setFechaPago
+                }
+              );
+              alert("Reporte guadado");
+              window.location.href = "/";
+            }}
+          >
+            Guardar horas trabajadas
+          </Button>
               <br />
               <Button
                 variant="contained"
@@ -82,11 +91,4 @@ export default function Solicitud() {
           </Grid>
     </Grid>
   );
-  function sendSolicitud(solicitud){
-    axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar', 
-    {'ID_A': solicitud[key].id, 'Nombre_A': fechaPago});   
-
-    alert('Envíado con éxito'); 
-    //window.location.href = "/";
-  }
 }
