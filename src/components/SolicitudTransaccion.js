@@ -24,7 +24,7 @@ export default function Solicitud() {
       <Grid item  className="solicitud-form">
         <FormControl>
           <Typography variant="h4" component="h4" marginTop="40px">
-            transacciones
+            Transaccion
           </Typography>
           <br />
         </FormControl>
