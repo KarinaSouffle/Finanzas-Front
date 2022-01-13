@@ -15,7 +15,6 @@ export default function Horas() {
   const [nomina, setnomina] = React.useState([]);
   const [selectednomina, setselectednomina] = React.useState("");
   const [estado, setestado] = React.useState("");
-  const [horasextra, sethorasextra] = React.useState("");
 
   useEffect(() => {
     const getnomina = async () => {
@@ -62,7 +61,7 @@ export default function Horas() {
           <br />
           <TextField
             id="outlined-basic"
-            label="Horas trabajadas"
+            label="Estado nuevo"
             variant="outlined"
             type="text"
             onChange={(ev) => setestado(ev.target.value)}
@@ -75,7 +74,6 @@ export default function Horas() {
               let rest = await axios.post(
                 "https://deerland-finanzas.herokuapp.com/solicitud-nomina/editar/"+selectednomina+"",
                 {
-                  "ID_Solicitud_N": selectednomina,
                   "ES_Solicitud_N": estado,
                 }
               );
@@ -83,7 +81,7 @@ export default function Horas() {
               window.location.href = "/";
             }}
           >
-            Guardar horas trabajadas
+            Guardar Estado
           </Button>
           <br />
           <Button
