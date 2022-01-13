@@ -83,7 +83,8 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
-    Object.keys(solicitud).forEach(key => {axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar')   }  );
+    Object.keys(solicitud).forEach(key => {axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar', 
+    {'ID_A': solicitud[key].id, 'Nombre_A': fechaPago})   }  )
 
     alert('Envíado con éxito'); 
     //window.location.href = "/";
