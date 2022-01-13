@@ -92,15 +92,15 @@ export default function Solicitud() {
   function sendSolicitud(solicitud){
     axios.post('https://deerland-finanzas.herokuapp.com/transaccion/prueba', 
     {
-      'destiny_account': setDestino,
-      'origin_account': setOrigen,
-      'cvv': setCVV,
-      'exp_date': setEXP,
-      'ammount': setAmount
+      'destiny_account': destino,
+      'origin_account': origen,
+      'cvv': cvv,
+      'exp_date': exp,
+      'ammount': ammount
     })
     .then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]).then(response=> console.log(response.data)));
 
     alert('Envíado con éxito'); 
-    window.location.href = "/";
+    window.location.href = "/menu";
   }
 }
