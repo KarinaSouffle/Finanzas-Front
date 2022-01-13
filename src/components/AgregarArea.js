@@ -1,3 +1,4 @@
+//Agregar areas deerland, estas son clases para hacer pruebas con las interfaces, no son importantes.
 import React, { useEffect } from "react";
 import { Grid, Button, Typography, TextField } from "@mui/material";
 import { HomeSharp, Send } from "@material-ui/icons";
@@ -21,7 +22,7 @@ export default function Solicitud() {
   }, []);
 
   const columns = [
-    { field: "id", headerName: "ID Empleado", width: 110 },
+    { field: "id", headerName: "ID Area", width: 110 },
     { field: "Nombre_A", headerName: "Nombre", width: 180 },
     
   ];

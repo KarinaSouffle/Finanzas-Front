@@ -6,11 +6,6 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import axios from "axios";
 
-//aqui debe haber inputs de
-//drop down eliges el empleado
-//horas trabajadas (solicitudnom)
-//horas extras (solicitudnom)
-
 export default function Horas() {
   const [recursos, setrecursos] = React.useState([]);
   const [selectedrecursos, setselectedrecursos] = React.useState("");
@@ -21,7 +16,6 @@ export default function Horas() {
       const res = await axios.get(
         "https://deerland-finanzas.herokuapp.com/recursosproceso"
       );
-      //console.log(res);
       const response = await res.data;
       setrecursos(response);
     };

@@ -1,6 +1,4 @@
-//vista
-//desplegar tabla de nomina de bd
-// tiene que generar lo de persepciones y deducciones
+
 import React, { useEffect } from "react";
 import { Grid, Button, Typography } from "@mui/material";
 import { HomeSharp } from "@material-ui/icons";

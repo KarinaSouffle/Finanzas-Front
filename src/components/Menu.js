@@ -22,7 +22,6 @@ class ButtonAppBar extends Component {
     cookies.remove("id", { path: "/" });
     cookies.remove("nombre", { path: "/" });
     cookies.remove("correo", { path: "/" });
-    //alert("Adios");
     window.location.href = "./";
   };
 

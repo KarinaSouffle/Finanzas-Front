@@ -86,7 +86,7 @@ export default function Solicitud() {
               </Button>
               <br />
               <Button
-              color="success"
+                color="success"
                 variant="contained"
                 onClick={() => (window.location.href = "/")}
               >
@@ -110,6 +110,8 @@ export default function Solicitud() {
       Authorization: 'Token 2de7ee32b45003ec7dfa2c4353bc98cd71ec254c'
     }}).then(response => axios.post('https://deerland-finanzas.herokuapp.com/transacciones/agregar', response.data).then(response=> console.log(response.data)));
 
+
+    //Si qutio los comentarios del alert y del location no me deja enviar la respuesta de banco a nuestra base de datos
     //.then(response=> console.log(response.data));
     //alert('Envíado con éxito'); 
     //window.location.href = "/menu";

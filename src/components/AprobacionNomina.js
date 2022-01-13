@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Grid, Button, TextField, Typography } from "@mui/material";
 import { HomeSharp, SaveSharp } from "@material-ui/icons";
@@ -5,11 +6,6 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import axios from "axios";
-
-//aqui debe haber inputs de
-//drop down eliges el empleado
-//horas trabajadas (solicitudnom)
-//horas extras (solicitudnom)
 
 export default function Horas() {
   const [nomina, setnomina] = React.useState([]);
@@ -21,7 +17,6 @@ export default function Horas() {
       const res = await axios.get(
         "https://deerland-finanzas.herokuapp.com/nominaproceso"
       );
-      //console.log(res);
       const response = await res.data;
       setnomina(response);
     };
