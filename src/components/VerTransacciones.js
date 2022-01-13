@@ -67,7 +67,7 @@ export default function VerTransaccion() {
       <Grid item sm={12} md={6} className="ingredients-form">
         <FormControl>
           <Typography variant="h4" component="h4" marginTop="40px">
-            Solicitudes de Recursos
+            Transacciones
           </Typography>
           <br />
           <div style={{ height: 400, width: 1010 }}>
