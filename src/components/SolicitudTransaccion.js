@@ -97,6 +97,7 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
+    
     axios.post('https://deerbank.herokuapp.com/transfer/', 
     {
       'destiny_account': destino,
@@ -105,7 +106,11 @@ export default function Solicitud() {
       'exp_date': exp,
       'ammount': ammount,
       'concept': concept
-    }).then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]));
+    ,headers: {
+      Authorization: 'Token 2de7ee32b45003ec7dfa2c4353bc98cd71ec254c'
+    }})
+    
+    //.then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]));
 
     //.then(response=> console.log(response.data));
     alert('Envíado con éxito'); 
