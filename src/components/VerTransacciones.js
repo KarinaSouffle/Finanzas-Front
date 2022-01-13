@@ -20,38 +20,38 @@ export default function VerTransaccion() {
   const columns = [
     { field: "id", headerName: "ID", width: 50 },
     {
-      field: 'Fecha',
-      headerName: 'Fecha',
+      field: 'status',
+      headerName: 'Estatus',
       width: 150,
       editable: false,
     },
     {
-        field: 'Recibo',
-        headerName: 'Recibo',
+        field: 'date',
+        headerName: 'Fecha',
         width: 150,
         editable: false,
     },
     {
-        field: 'Origen',
-        headerName: 'Cuenta de Origen',
+        field: 'ammount',
+        headerName: 'Monto',
         width: 150,
         editable: false,
     },
     {
-        field: 'Destino',
+        field: 'origin',
+        headerName: 'Cuenta Origen',
+        width: 150,
+        editable: false,
+    },
+    {
+        field: 'destiny',
         headerName: 'Cuenta Destino',
         width: 150,
         editable: false,
     },
     {
-        field: 'Estatus',
-        headerName: 'Estatus de la transaccion',
-        width: 150,
-        editable: false,
-    },
-    {
-        field: 'Monto',
-        headerName: 'Monto',
+        field: 'receipt',
+        headerName: 'Recibo',
         width: 150,
         editable: false,
     }
