@@ -21,7 +21,7 @@ export default function Solicitud() {
   }, []);
 
   const columns = [
-    { field: "ID_A", headerName: "ID Empleado", width: 110 },
+    { field: "id", headerName: "ID Empleado", width: 110 },
     { field: "Nombre_A", headerName: "Nombre", width: 180 },
     
   ];
