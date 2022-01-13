@@ -41,15 +41,6 @@ export default function Solicitud() {
           <br />
         </FormControl>
       </Grid>
-      <Grid item md={12}>  
-          <div style={{ height: 500, width:1010}}>
-            <DataGrid
-              rows={solicitud}
-              columns={columns}
-
-            />
-          </div>
-          </Grid>
           <Grid item md={12}>  
             <FormControl>
             <Typography variant="p" component="p" marginTop="40px">
@@ -61,6 +52,7 @@ export default function Solicitud() {
               type="text"
               onChange={(ev) => setFechaPago(ev.target.value)}
            />
+              <br />
               <Button
                 color="secondary"
                 variant="contained"
