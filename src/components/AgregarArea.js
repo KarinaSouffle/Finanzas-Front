@@ -13,37 +13,17 @@ export default function Solicitud() {
  
   useEffect(() => {
     const getSolicitud= async () => {
-      const res = await axios.get('https://deerland-empleados.herokuapp.com/Nomina');
-      const response = res.data.map(({idnomina, ...rest}) => ({...rest, id:idnomina}));
+      const res = await axios.get('https://deerland-finanzas.herokuapp.com/areasdeerland');
+      const response = res.data.map(({ID_A, ...rest}) => ({...rest, id:ID_A}));
       setSolicitud(response);
     };
     getSolicitud();
   }, []);
 
   const columns = [
-    { field: "idempleados", headerName: "ID Empleado", width: 110 },
-    { field: "nombreempleado", headerName: "Nombre", width: 180 },
-    { field: "salariobase", headerName: "Salario Base", width: 180 },
-    {
-      field: "horastrabajadas",
-      headerName: "H.Trabajadas",
-      width: 125,
-    },
-    {
-      field: "horasextra",
-      headerName: "H.Extra",
-      width: 80,
-    },
-    {
-      field: "sueldototal",
-      headerName: "Sueldo Total",
-      width: 125,
-    },
-    {
-      field: "fechacreacion",
-      headerName: "Fecha Registro de Horas",
-      width: 200,
-    },
+    { field: "ID_A", headerName: "ID Empleado", width: 110 },
+    { field: "Nombre_A", headerName: "Nombre", width: 180 },
+    
   ];
 
   return (
@@ -56,7 +36,7 @@ export default function Solicitud() {
       <Grid item  className="solicitud-form">
         <FormControl>
           <Typography variant="h4" component="h4" marginTop="40px">
-            Solicitud Nómina
+            Areas Deerland
           </Typography>
           <br />
         </FormControl>
@@ -73,12 +53,12 @@ export default function Solicitud() {
           <Grid item md={12}>  
             <FormControl>
             <Typography variant="p" component="p" marginTop="40px">
-            Fecha de Pago de Nómina:
+            Area Deerland
           </Typography>  
             <TextField
               id="outlined-basic"
               variant="outlined"
-              type="date"
+              type="text"
               onChange={(ev) => setFechaPago(ev.target.value)}
            />
               <br />
@@ -88,7 +68,7 @@ export default function Solicitud() {
                 startIcon={<Send />}
                 onClick={()=>{sendSolicitud(solicitud)}}
               >
-                Enviar Solicitud
+                Enviar Area
               </Button>
               <br />
               <Button
@@ -103,9 +83,8 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
-    Object.keys(solicitud).forEach(key => {axios.post('https://deerland-finanzas.herokuapp.com/solicitud-nomina/agregar', 
-    {'IDNomina': solicitud[key].id, 'FechaPago': fechaPago, 'SalarioBase':solicitud[key].salariobase, 'HorasE':solicitud[key].horasextra, 'SalarioT': solicitud[key].sueldototal})
-    .then(response => axios.post('https://deerland-empleados.herokuapp.com/Solicitud', response.data[0]).then(response=> console.log(response.data)));   }  )
+    Object.keys(solicitud).forEach(key => {axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar', 
+    {'ID_A': solicitud[key].id, 'Nombre_A': fechaPago})   }  )
 
     alert('Envíado con éxito'); 
     //window.location.href = "/";
