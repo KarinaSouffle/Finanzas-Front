@@ -45,16 +45,21 @@ class ButtonAppBar extends Component {
                 Areas Deerland
               </a>
               <br />
-              <a id="home" className="menu-item" href="/revisarhoras">
-                Revisar horas trabajadas
+              <br />
+              <a id="home" className="menu-item" href="/agregararea">
+                Agregar Areas Deerland
               </a>
               <br />
-              <a id="home" className="menu-item" href="/solicitud">
-                Solicitud Nómina
+              <a id="home" className="menu-item" href="/solicitud-nomina">
+                Solicitudes De Nomina
               </a>
               <br />
-              <a id="home" className="menu-item" href="/revisarsolicitud">
-                Revisar Solicitudes Nómina
+              <a id="home" className="menu-item" href="/solicitud-recursos">
+                Solicitudes De Recursos
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/vertransacciones">
+                Ver Transacciones
               </a>
             </Menu>
 
