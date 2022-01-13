@@ -64,7 +64,7 @@ export default function Horas() {
             id="outlined-basic"
             label="Horas trabajadas"
             variant="outlined"
-            type="number"
+            type="text"
             onChange={(ev) => setestado(ev.target.value)}
           />
           <Button
