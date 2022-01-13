@@ -83,7 +83,7 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
-    response => axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar', response.data[0]).then(response=> console.log(response.data))); 
+    response => axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar', response.data[0]).then(response=> console.log(response.data)); 
 
     alert('Envíado con éxito'); 
     //window.location.href = "/";
