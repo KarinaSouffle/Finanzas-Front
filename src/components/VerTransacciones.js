@@ -10,7 +10,7 @@ export default function VerTransaccion() {
 
   useEffect(() => {
     const getTransacciones = async () => {
-      const res = await axios.get('https://deerland-finanzas.herokuapp.com/transaccion');
+      const res = await axios.get('https://deerland-finanzas.herokuapp.com/transacciones');
       const response = res.data.map(({transaction_num, ...rest}) => ({...rest, id:transaction_num}));
       SetTransacciones(response);
     };
