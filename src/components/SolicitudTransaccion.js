@@ -90,14 +90,14 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
-    Object.keys(solicitud).forEach(key => {axios.post('https://deerland-finanzas.herokuapp.com/transacciones/prueba', 
-    {'destiny_account': destino,
-    'origin_account': origen,
-    'cvv': cvv,
-    'exp_date': exp,
-    'ammount': ammount})
-    .then(response => axios.post('https://deerland-finanzas.herokuapp.com/transacciones/agregar', response.data[0]).then(response=> console.log(response.data)));   }  )
-
+    axios.post('https://deerland-finanzas.herokuapp.com/transacciones/prueba', 
+    {
+      'destiny_account': destino,
+      'origin_account': origen,
+      'cvv': cvv,
+      'exp_date': exp,
+      'ammount': ammount
+    }).then(response => axios.post('https://deerland-finanzas.herokuapp.com/transacciones/agregar', response.data[0]));
 
     alert('Envíado con éxito'); 
     window.location.href = "/menu";
