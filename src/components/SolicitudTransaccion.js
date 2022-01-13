@@ -74,7 +74,7 @@ export default function Solicitud() {
               id="outlined-basic"
               variant="outlined"
               type="text"
-              onChange={(ev) => setConcepto(ev.target.value)}
+              onChange={(ev) => setConcept(ev.target.value)}
            />
               <br />
               <Button
