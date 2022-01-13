@@ -14,13 +14,13 @@ import axios from "axios";
 export default function Horas() {
   const [nomina, setnomina] = React.useState([]);
   const [selectednomina, setselectednomina] = React.useState("");
-  const [horastrabajadas, sethorastrabajadas] = React.useState("");
+  const [estado, setestado] = React.useState("");
   const [horasextra, sethorasextra] = React.useState("");
 
   useEffect(() => {
     const getnomina = async () => {
       const res = await axios.get(
-        "https://deerland-finanzas.herokuapp.com/solicitud-nomina"
+        "https://deerland-finanzas.herokuapp.com/nominaproceso"
       );
       //console.log(res);
       const response = await res.data;
@@ -38,7 +38,7 @@ export default function Horas() {
       <Grid item sm={12} md={6} className="ingredients-form">
         <FormControl>
           <Typography variant="h4" component="h4" marginTop="40px">
-            Reporte de horas trabajadas
+            Aprobacion de Solicitudes de Nomina
           </Typography>
           <br />
           <Select
@@ -65,28 +65,18 @@ export default function Horas() {
             label="Horas trabajadas"
             variant="outlined"
             type="number"
-            onChange={(ev) => sethorastrabajadas(ev.target.value)}
+            onChange={(ev) => setestado(ev.target.value)}
           />
-          <br />
-          <TextField
-            id="outlined-basic"
-            label="Horas extra"
-            variant="outlined"
-            type="number"
-            onChange={(ev) => sethorasextra(ev.target.value)}
-          />
-          <br />
           <Button
             color="success"
             variant="contained"
             startIcon={<SaveSharp />}
             onClick={async () => {
               let rest = await axios.post(
-                "https://deerland-nomina.herokuapp.com/Horas",
+                "https://deerland-finanzas.herokuapp.com/solicitud-nomina/editar/"+ID_Solicitud_N,
                 {
                   ID_Solicitud_N: selectednomina,
-                  horasextra: horasextra,
-                  horastrabajadas: horastrabajadas,
+                  ES_Solicitud_N: estado,
                 }
               );
               alert("Reporte guadado");
