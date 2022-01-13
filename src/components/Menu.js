@@ -33,10 +33,10 @@ class ButtonAppBar extends Component {
   }
   render() {
     return (
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: -5 }}>
         <AppBar position="static" color="success">
           <Toolbar>
-            <Menu onStateChange={isMenuOpen} position="left">
+            <Menu onStateChange={isMenuOpen}>
               <a id="home" className="menu-item" href="/">
                 Home
               </a>
