@@ -107,7 +107,7 @@ export default function Solicitud() {
       'concept': concept}
     ,{headers: {
       Authorization: 'Token 2de7ee32b45003ec7dfa2c4353bc98cd71ec254c'
-    }}).then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data));
+    }}).then(response => axios.post('https://deerland-finanzas.herokuapp.com/transacciones/agregar', response.data));
 
     //.then(response=> console.log(response.data));
     alert('Envíado con éxito'); 
