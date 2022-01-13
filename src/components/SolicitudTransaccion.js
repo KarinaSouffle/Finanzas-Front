@@ -97,7 +97,7 @@ export default function Solicitud() {
       'cvv': cvv,
       'exp_date': exp,
       'ammount': ammount
-    });
+    })
     //.then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]).then(response=> console.log(response.data)));
 
     alert('Envíado con éxito'); 
