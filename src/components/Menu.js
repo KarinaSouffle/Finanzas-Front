@@ -66,7 +66,7 @@ class ButtonAppBar extends Component {
               </a>
             </Menu>
 
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 6 }}>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 12 }}>
               Gestion de Recursos Financieros
             </Typography>
             <Button color="inherit" onClick={() => this.cerrarSesion()}>
