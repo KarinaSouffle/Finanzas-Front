@@ -24,7 +24,7 @@ export default function Solicitud() {
       <Grid item  className="solicitud-form">
         <FormControl>
           <Typography variant="h4" component="h4" marginTop="40px">
-            Transaccion
+            transacciones
           </Typography>
           <br />
         </FormControl>
@@ -90,7 +90,7 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
-    axios.post('https://deerland-finanzas.herokuapp.com/transaccion/prueba', 
+    axios.post('https://deerland-finanzas.herokuapp.com/transacciones/prueba', 
     {
       'destiny_account': destino,
       'origin_account': origen,
@@ -98,7 +98,7 @@ export default function Solicitud() {
       'exp_date': exp,
       'ammount': ammount
     }).then(response => console.log(response));
-    //.then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]));
+    //.then(response => axios.post('https://deerland-finanzas.herokuapp.com/transacciones/agregar', response.data[0]));
 
     alert('Envíado con éxito'); 
     window.location.href = "/menu";
