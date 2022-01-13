@@ -8,6 +8,7 @@ import AreasDeerland from "../components/AreasDeerland";
 import SolicitudNomina from "../components/SolicitudNomina";
 import SolicitudRecursos from "../components/SolicitudRecursos";
 import VerTransacciones from "../components/VerTransacciones";
+import AgregarAreas from "../components/AgregarAreas";
 
 function Routes() {
   return (
@@ -21,6 +22,7 @@ function Routes() {
         <Route exact path="/solicitud-recursos" component={SolicitudRecursos} />
         <Route exact path="/vertransacciones" component={VerTransacciones} />
         <Route exact path="/revisarsolicitud" component={RevisarSolicitud} />
+        <Route exact path="/agregarareas" component={AgregarAreas}/>
       </Switch>
     </BrowserRouter>
   );
