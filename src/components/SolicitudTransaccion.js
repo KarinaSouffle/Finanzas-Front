@@ -13,6 +13,7 @@ export default function Solicitud() {
   const [cvv, setCVV] = React.useState("");
   const [exp, setEXP] = React.useState("");
   const [ammount, setAmount] = React.useState("");
+  const [concept, setConcept] = React.useState("");
 
   return (
     <Grid
@@ -68,6 +69,13 @@ export default function Solicitud() {
               type="text"
               onChange={(ev) => setAmount(ev.target.value)}
            />
+           <TextField
+              label="Concepto"
+              id="outlined-basic"
+              variant="outlined"
+              type="text"
+              onChange={(ev) => setConcepto(ev.target.value)}
+           />
               <br />
               <Button
                 color="secondary"
@@ -80,10 +88,9 @@ export default function Solicitud() {
               <br />
               <Button
                 variant="contained"
-                startIcon={<HomeSharp />}
                 onClick={() => (window.location.href = "/")}
               >
-                Home
+                Inicio
               </Button>
             </FormControl>
           </Grid>
@@ -96,7 +103,8 @@ export default function Solicitud() {
       'origin_account': origen,
       'cvv': cvv,
       'exp_date': exp,
-      'ammount': ammount
+      'ammount': ammount,
+      'concept': concept
     }).then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]));
 
     //.then(response=> console.log(response.data));
