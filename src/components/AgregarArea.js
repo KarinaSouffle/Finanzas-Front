@@ -85,7 +85,7 @@ export default function Solicitud() {
   function Agregar(solicitud){
     axios.post("https://deerland-finanzas.herokuapp.com/areasdeerland/agregar",
           {
-            'Nombre_A': setFechaPago
+            'Nombre_A': fechaPago
           }).then(response => console.log(response));
     alert("Area Agregada");
     window.location.href = "/";
