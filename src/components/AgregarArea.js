@@ -33,23 +33,6 @@ export default function Solicitud() {
       justifyContent="center"
       alignItems="center"
     >
-      <Grid item  className="solicitud-form">
-        <FormControl>
-          <Typography variant="h4" component="h4" marginTop="40px">
-            Areas Deerland
-          </Typography>
-          <br />
-        </FormControl>
-      </Grid>
-      <Grid item md={12}>  
-          <div style={{ height: 500, width:1010}}>
-            <DataGrid
-              rows={solicitud}
-              columns={columns}
-
-            />
-          </div>
-          </Grid>
           <Grid item md={12}>  
             <FormControl>
             <Typography variant="p" component="p" marginTop="40px">
