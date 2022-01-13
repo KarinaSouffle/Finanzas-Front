@@ -78,7 +78,7 @@ export default function Solicitud() {
            />
               <br />
               <Button
-                color="secondary"
+                color="success"
                 variant="contained"
                 onClick={()=>{sendSolicitud(solicitud)}}
               >
@@ -87,6 +87,7 @@ export default function Solicitud() {
               <br />
               <Button
                 variant="contained"
+                color="success"
                 onClick={() => (window.location.href = "/")}
               >
                 Inicio
