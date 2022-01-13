@@ -21,7 +21,7 @@ export default function Solicitud() {
   }, []);
 
   const columns = [
-    { field: "ID_A", headerName: "ID Empleado", width: 110 },
+    { field: "id", headerName: "ID Empleado", width: 110 },
     { field: "Nombre_A", headerName: "Nombre", width: 180 },
     
   ];
@@ -66,7 +66,7 @@ export default function Solicitud() {
                 color="secondary"
                 variant="contained"
                 startIcon={<Send />}
-                onClick={()=>{sendSolicitud(solicitud)}}
+                onClick={()=>{Agregar(solicitud)}}
               >
                 Enviar Area
               </Button>
@@ -82,10 +82,12 @@ export default function Solicitud() {
           </Grid>
     </Grid>
   );
-  function sendSolicitud(solicitud){
-    response => axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar', response.data[0]).then(response=> console.log(response.data)); 
-
-    alert('Envíado con éxito'); 
-    //window.location.href = "/";
+  function Agregar(solicitud){
+    axios.post("https://deerland-finanzas.herokuapp.com/areasdeerland/agregar",
+          {
+            'Nombre_A': setFechaPago
+          }).then(response => console.log(response));
+    alert("Area Agregada");
+    window.location.href = "/";
   }
 }
