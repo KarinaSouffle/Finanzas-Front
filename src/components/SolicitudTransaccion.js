@@ -100,7 +100,7 @@ export default function Solicitud() {
     })
     //.then(response => axios.post('https://deerland-finanzas.herokuapp.com/transacciones/agregar', response.data[0]));
 
-    alert('Envíado con éxito'); 
+    alert('Envíado con éxito'+destino+origen+cvv+exp+ammount); 
     window.location.href = "/menu";
   }
 }
