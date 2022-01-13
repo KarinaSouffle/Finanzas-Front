@@ -35,14 +35,14 @@ export default function Solicitud() {
               label="Cuenta Destino"
               id="outlined-basic"
               variant="outlined"
-              type="texto"
+              type="text"
               onChange={(ev) => setDestino(ev.target.value)}
            />
            <TextField
               label="Cuenta Origen"
               id="outlined-basic"
               variant="outlined"
-              type="texto"
+              type="text"
               onChange={(ev) => setOrigen(ev.target.value)}
            />
            <br/>
@@ -50,14 +50,14 @@ export default function Solicitud() {
               label="CVV"
               id="outlined-basic"
               variant="outlined"
-              type="texto"
+              type="text"
               onChange={(ev) => setCVV(ev.target.value)}
            />
             <TextField
               label="Fecha de exp"
               id="outlined-basic"
               variant="outlined"
-              type="date"
+              type="text"
               onChange={(ev) => setEXP(ev.target.value)}
            />
            <br/>
@@ -65,7 +65,7 @@ export default function Solicitud() {
               label="Cantidad"
               id="outlined-basic"
               variant="outlined"
-              type="texto"
+              type="text"
               onChange={(ev) => setAmount(ev.target.value)}
            />
               <br />
@@ -92,7 +92,7 @@ export default function Solicitud() {
   function sendSolicitud(solicitud){
     axios.post('https://deerland-finanzas.herokuapp.com/transaccion/prueba', 
     {
-      'destiny_accunt': setDestino,
+      'destiny_account': setDestino,
       'origin_account': setOrigen,
       'cvv': setCVV,
       'exp_date': setEXP,
