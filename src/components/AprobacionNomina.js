@@ -73,7 +73,7 @@ export default function Horas() {
             startIcon={<SaveSharp />}
             onClick={async () => {
               let rest = await axios.post(
-                "https://deerland-finanzas.herokuapp.com/solicitud-nomina/editar/"+selectednomina,
+                "https://deerland-finanzas.herokuapp.com/solicitud-nomina/editar/"+selectednomina+"",
                 {
                   ID_Solicitud_N: selectednomina,
                   ES_Solicitud_N: estado,
