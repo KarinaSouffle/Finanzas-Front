@@ -8,43 +8,11 @@ import axios from "axios";
 
 export default function Solicitud() {
   const [solicitud, setSolicitud] = React.useState([]);
-  const [fechaPago, setFechaPago] = React.useState("");
-
- 
-  useEffect(() => {
-    const getSolicitud= async () => {
-      const res = await axios.get('https://deerland-empleados.herokuapp.com/Nomina');
-      const response = res.data.map(({idnomina, ...rest}) => ({...rest, id:idnomina}));
-      setSolicitud(response);
-    };
-    getSolicitud();
-  }, []);
-
-  const columns = [
-    { field: "idempleados", headerName: "ID Empleado", width: 110 },
-    { field: "nombreempleado", headerName: "Nombre", width: 180 },
-    { field: "salariobase", headerName: "Salario Base", width: 180 },
-    {
-      field: "horastrabajadas",
-      headerName: "H.Trabajadas",
-      width: 125,
-    },
-    {
-      field: "horasextra",
-      headerName: "H.Extra",
-      width: 80,
-    },
-    {
-      field: "sueldototal",
-      headerName: "Sueldo Total",
-      width: 125,
-    },
-    {
-      field: "fechacreacion",
-      headerName: "Fecha Registro de Horas",
-      width: 200,
-    },
-  ];
+  const [destino, setDestino] = React.useState("");
+  const [origen, setOrigen] = React.useState("");
+  const [cvv, setCVV] = React.useState("");
+  const [exp, setEXP] = React.useState("");
+  const [ammount, setAmount] = React.useState("");
 
   return (
     <Grid
@@ -56,30 +24,49 @@ export default function Solicitud() {
       <Grid item  className="solicitud-form">
         <FormControl>
           <Typography variant="h4" component="h4" marginTop="40px">
-            Solicitud Nómina
+            Transaccion
           </Typography>
           <br />
         </FormControl>
       </Grid>
-      <Grid item md={12}>  
-          <div style={{ height: 500, width:1010}}>
-            <DataGrid
-              rows={solicitud}
-              columns={columns}
-
-            />
-          </div>
-          </Grid>
           <Grid item md={12}>  
             <FormControl>
-            <Typography variant="p" component="p" marginTop="40px">
-            Fecha de Pago de Nómina:
-          </Typography>  
             <TextField
+              label="Cuenta Destino"
+              id="outlined-basic"
+              variant="outlined"
+              type="texto"
+              onChange={(ev) => setDestino(ev.target.value)}
+           />
+           <TextField
+              label="Cuenta Origen"
+              id="outlined-basic"
+              variant="outlined"
+              type="texto"
+              onChange={(ev) => setOrigen(ev.target.value)}
+           />
+           <br/>
+           <TextField
+              label="CVV"
+              id="outlined-basic"
+              variant="outlined"
+              type="texto"
+              onChange={(ev) => setCVV(ev.target.value)}
+           />
+            <TextField
+              label="Fecha de exp"
               id="outlined-basic"
               variant="outlined"
               type="date"
-              onChange={(ev) => setFechaPago(ev.target.value)}
+              onChange={(ev) => setEXP(ev.target.value)}
+           />
+           <br/>
+           <TextField
+              label="Cantidad"
+              id="outlined-basic"
+              variant="outlined"
+              type="texto"
+              onChange={(ev) => setAmount(ev.target.value)}
            />
               <br />
               <Button
@@ -103,11 +90,17 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
-    Object.keys(solicitud).forEach(key => {axios.post('https://deerland-finanzas.herokuapp.com/solicitud-nomina/agregar', 
-    {'IDNomina': solicitud[key].id, 'FechaPago': fechaPago, 'SalarioBase':solicitud[key].salariobase, 'HorasE':solicitud[key].horasextra, 'SalarioT': solicitud[key].sueldototal})
-    .then(response => axios.post('https://deerland-empleados.herokuapp.com/Solicitud', response.data[0]).then(response=> console.log(response.data)));   }  )
+    axios.post('https://deerland-finanzas.herokuapp.com/transaccion/prueba', 
+    {
+      'destiny_accunt': setDestino,
+      'origin_account': setOrigen,
+      'cvv': setCVV,
+      'exp_date': setEXP,
+      'ammount': setAmount
+    })
+    .then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]).then(response=> console.log(response.data)));
 
     alert('Envíado con éxito'); 
-    //window.location.href = "/";
+    window.location.href = "/";
   }
 }
