@@ -75,8 +75,8 @@ export default function Horas() {
               let rest = await axios.post(
                 "https://deerland-finanzas.herokuapp.com/solicitud-nomina/editar/"+selectednomina+"",
                 {
-                  ID_Solicitud_N: selectednomina,
-                  ES_Solicitud_N: estado,
+                  "ID_Solicitud_N": selectednomina,
+                  "ES_Solicitud_N": estado,
                 }
               );
               alert("Reporte guadado");
