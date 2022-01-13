@@ -65,7 +65,6 @@ export default function Solicitud() {
               <Button
             color="success"
             variant="contained"
-            startIcon={<SaveSharp />}
             onClick={async () => {
               let rest = await axios.post(
                 "https://deerland-finanzas.herokuapp.com/agregararea",
