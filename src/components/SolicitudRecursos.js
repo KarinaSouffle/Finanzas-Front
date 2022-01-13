@@ -90,7 +90,7 @@ export default function Recursos() {
           <Button
             variant="contained"
             startIcon={<HomeSharp />}
-            onClick={() => (window.location.href = "/")}
+            onClick={() => (window.location.href = "/menu")}
           >
             Home
           </Button>

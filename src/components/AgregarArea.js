@@ -65,7 +65,7 @@ export default function Solicitud() {
               <Button
                 variant="contained"
                 startIcon={<HomeSharp />}
-                onClick={() => (window.location.href = "/")}
+                onClick={() => (window.location.href = "/menu")}
               >
                 Home
               </Button>
@@ -79,6 +79,6 @@ export default function Solicitud() {
             'Nombre_A': fechaPago
           }).then(response => console.log(response));
     alert("Area Agregada");
-    window.location.href = "/";
+    window.location.href = "/menu";
   }
 }

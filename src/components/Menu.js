@@ -33,28 +33,32 @@ class ButtonAppBar extends Component {
   }
   render() {
     return (
-      <Box sx={{ flexGrow: -5 }}>
+      <Box sx={{ flexGrow: -5, ml: -6  }}>
         <AppBar position="static" color="success">
           <Toolbar>
             <Menu onStateChange={isMenuOpen}>
               <a id="home" className="menu-item" href="/">
-                Home
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/areasdeerland">
-                Areas Deerland
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/agregararea">
-                Agregar Areas Deerland
+                Inicio
               </a>
               <br />
               <a id="home" className="menu-item" href="/solicitud-nomina">
                 Solicitudes De Nomina
               </a>
               <br />
+              <a id="home" className="menu-item" href="/aprobacionnomina">
+                Aprobacion de Solicitud de Nomina
+              </a>
+              <br />
               <a id="home" className="menu-item" href="/solicitud-recursos">
                 Solicitudes De Recursos
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/aprobacionrecursos">
+                Aprobacion de Solicitud de Recursos
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/solicitud-transaccion">
+                Transaccion
               </a>
               <br />
               <a id="home" className="menu-item" href="/vertransacciones">

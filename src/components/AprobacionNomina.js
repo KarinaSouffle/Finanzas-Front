@@ -78,7 +78,7 @@ export default function Horas() {
                 }
               );
               alert("Reporte guadado");
-              window.location.href = "/";
+              window.location.href = "/menu";
             }}
           >
             Guardar Estado
@@ -87,7 +87,7 @@ export default function Horas() {
           <Button
             variant="contained"
             startIcon={<HomeSharp />}
-            onClick={() => (window.location.href = "/")}
+            onClick={() => (window.location.href = "/menu")}
           >
             Home
           </Button>
