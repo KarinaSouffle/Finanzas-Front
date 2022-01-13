@@ -63,21 +63,13 @@ export default function Solicitud() {
            />
               <br />
               <Button
-            color="success"
-            variant="contained"
-            onClick={async () => {
-              let rest = await axios.post(
-                "https://deerland-finanzas.herokuapp.com/agregararea",
-                {
-                  Nombre_A: setFechaPago
-                }
-              );
-              alert("Reporte guadado");
-              window.location.href = "/";
-            }}
-          >
-            Guardar horas trabajadas
-          </Button>
+                color="secondary"
+                variant="contained"
+                startIcon={<Send />}
+                onClick={()=>{sendSolicitud(solicitud)}}
+              >
+                Enviar Area
+              </Button>
               <br />
               <Button
                 variant="contained"
@@ -90,4 +82,10 @@ export default function Solicitud() {
           </Grid>
     </Grid>
   );
+  function sendSolicitud(solicitud){
+    response => axios.post('https://deerland-finanzas.herokuapp.com/areasdeerland/agregar', response.data[0]).then(response=> console.log(response.data))); 
+
+    alert('Envíado con éxito'); 
+    //window.location.href = "/";
+  }
 }
