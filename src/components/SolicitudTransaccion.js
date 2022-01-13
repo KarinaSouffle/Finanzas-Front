@@ -90,16 +90,16 @@ export default function Solicitud() {
     </Grid>
   );
   function sendSolicitud(solicitud){
-    axios.post('https://deerland-finanzas.herokuapp.com/transacciones/prueba', 
+    axios.post('https://deerbank.herokuapp.com/transfer/', 
     {
       'destiny_account': destino,
       'origin_account': origen,
       'cvv': cvv,
       'exp_date': exp,
       'ammount': ammount
-    }).then(response=> this.solicitud = response.data.Solicitud);
-    //.then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]).then(response=> console.log(response.data)));
+    }).then(response => axios.post('https://deerland-finanzas.herokuapp.com/transaccion/agregar', response.data[0]));
 
+    //.then(response=> console.log(response.data));
     alert('Envíado con éxito'); 
     window.location.href = "/menu";
   }
