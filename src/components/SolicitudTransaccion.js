@@ -86,8 +86,8 @@ export default function Solicitud() {
               </Button>
               <br />
               <Button
+              color="success"
                 variant="contained"
-                color="success"
                 onClick={() => (window.location.href = "/")}
               >
                 Inicio
@@ -112,6 +112,6 @@ export default function Solicitud() {
 
     //.then(response=> console.log(response.data));
     //alert('Envíado con éxito'); 
-    window.location.href = "/menu";
+    //window.location.href = "/menu";
   }
 }

@@ -89,10 +89,10 @@ export default function Recursos() {
           <br />
           <Button
             variant="contained"
-            startIcon={<HomeSharp />}
+            color="success"
             onClick={() => (window.location.href = "/menu")}
           >
-            Home
+            Inicio
           </Button>
         </FormControl>
       </Grid>
