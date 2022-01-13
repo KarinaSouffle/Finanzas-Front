@@ -8,15 +8,6 @@ import FormControl from "@mui/material/FormControl";
 import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
 
-import { AppBar } from "@mui/material";
-import { Box } from "@mui/material";
-import { Toolbar } from "@mui/material";
-import { Typography } from "@mui/material";
-import { Button } from "@mui/material";
-import { slide as Menu } from "react-burger-menu";
-import Cookies from "universal-cookie";
-import "../css/hamburguesa.css";
-
 export default function Nomina() {
   const [areas, setAreasDeerland] = React.useState([]);
 
