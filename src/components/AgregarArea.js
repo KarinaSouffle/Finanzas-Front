@@ -53,7 +53,7 @@ export default function Solicitud() {
           <Grid item md={12}>  
             <FormControl>
             <Typography variant="p" component="p" marginTop="40px">
-            Area Deerland
+            Agregar Area Deerland
           </Typography>  
             <TextField
               id="outlined-basic"
@@ -61,7 +61,6 @@ export default function Solicitud() {
               type="text"
               onChange={(ev) => setFechaPago(ev.target.value)}
            />
-              <br />
               <Button
                 color="secondary"
                 variant="contained"
