@@ -34,9 +34,9 @@ class ButtonAppBar extends Component {
   render() {
     return (
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+        <AppBar position="static" color="success">
           <Toolbar>
-            <Menu onStateChange={isMenuOpen}>
+            <Menu onStateChange={isMenuOpen} position="left">
               <a id="home" className="menu-item" href="/">
                 Home
               </a>
@@ -44,7 +44,6 @@ class ButtonAppBar extends Component {
               <a id="home" className="menu-item" href="/areasdeerland">
                 Areas Deerland
               </a>
-              <br />
               <br />
               <a id="home" className="menu-item" href="/agregararea">
                 Agregar Areas Deerland
@@ -63,11 +62,7 @@ class ButtonAppBar extends Component {
               </a>
             </Menu>
 
-            <Typography
-              variant="h6"
-              component="div"
-              sx={{ flexGrow: 1, ml: 6 }}
-            >
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               Gestion de Recursos Financieros
             </Typography>
             <Button color="inherit" onClick={() => this.cerrarSesion()}>
