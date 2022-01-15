@@ -91,7 +91,7 @@ export default function Solicitud() {
               <Button
                 color="success"
                 variant="contained"
-                onClick={() => (window.location.href = "/")}
+                onClick={() => (window.location.href = "/menu")}
               >
                 Inicio
               </Button>
