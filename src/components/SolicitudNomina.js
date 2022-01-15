@@ -92,5 +92,6 @@ export default function Nomina() {
         </FormControl>
       </Grid>
     </Grid>
+    
   );
 }

@@ -28,52 +28,8 @@ export default function Nomina() {
       editable: true,
     }
   ];
-
+  
   return (
-    return(){
-      <Box sx={{ flexGrow: -5, ml: -6  }}>
-        <AppBar position="static" color="success">
-          <Toolbar>
-            <Menu onStateChange={isMenuOpen}>
-              <a id="home" className="menu-item" href="/">
-                Inicio
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/solicitud-nomina">
-                Solicitudes De Nomina
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/aprobacionnomina">
-                Aprobacion de Solicitud de Nomina
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/solicitud-recursos">
-                Solicitudes De Recursos
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/aprobacionrecursos">
-                Aprobacion de Solicitud de Recursos
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/solicitud-transaccion">
-                Transaccion
-              </a>
-              <br />
-              <a id="home" className="menu-item" href="/vertransacciones">
-                Ver Transacciones
-              </a>
-            </Menu>
-
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 12 }}>
-              Gestion de Recursos Financieros
-            </Typography>
-            <Button color="inherit" onClick={() => this.cerrarSesion()}>
-              Logout
-            </Button>
-          </Toolbar>
-        </AppBar>
-      </Box>
-    }
     <Grid
       container
       direction="column"
