@@ -116,4 +116,6 @@ export default function Solicitud() {
     //alert('Envíado con éxito'); 
     //window.location.href = "/menu";
   }
+  alert('Envíado con éxito'); 
+  window.location.href = "/menu";
 }
