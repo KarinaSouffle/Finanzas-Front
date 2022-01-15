@@ -80,7 +80,11 @@ export default function Solicitud() {
               <Button
                 color="success"
                 variant="contained"
-                onClick={()=>{sendSolicitud(solicitud)}}
+                onClick={()=>{
+                  sendSolicitud(solicitud);
+                  alert('Envíado con éxito'); 
+                  window.location.href = "/menu";
+                }}
               >
                 Enviar Solicitud
               </Button>
@@ -116,6 +120,4 @@ export default function Solicitud() {
     //alert('Envíado con éxito'); 
     //window.location.href = "/menu";
   }
-  alert('Envíado con éxito'); 
-  window.location.href = "/menu";
 }
