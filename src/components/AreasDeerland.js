@@ -5,6 +5,7 @@ import { HomeSharp } from "@material-ui/icons";
 import FormControl from "@mui/material/FormControl";
 import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
+import { render } from "react-dom/cjs/react-dom.development";
 
 export default function Nomina() {
   const [areas, setAreasDeerland] = React.useState([]);
@@ -29,6 +30,50 @@ export default function Nomina() {
   ];
 
   return (
+    return(){
+      <Box sx={{ flexGrow: -5, ml: -6  }}>
+        <AppBar position="static" color="success">
+          <Toolbar>
+            <Menu onStateChange={isMenuOpen}>
+              <a id="home" className="menu-item" href="/">
+                Inicio
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/solicitud-nomina">
+                Solicitudes De Nomina
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/aprobacionnomina">
+                Aprobacion de Solicitud de Nomina
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/solicitud-recursos">
+                Solicitudes De Recursos
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/aprobacionrecursos">
+                Aprobacion de Solicitud de Recursos
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/solicitud-transaccion">
+                Transaccion
+              </a>
+              <br />
+              <a id="home" className="menu-item" href="/vertransacciones">
+                Ver Transacciones
+              </a>
+            </Menu>
+
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1, ml: 12 }}>
+              Gestion de Recursos Financieros
+            </Typography>
+            <Button color="inherit" onClick={() => this.cerrarSesion()}>
+              Logout
+            </Button>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    }
     <Grid
       container
       direction="column"
