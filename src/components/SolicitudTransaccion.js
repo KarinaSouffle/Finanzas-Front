@@ -82,8 +82,7 @@ export default function Solicitud() {
                 variant="contained"
                 onClick={()=>{
                   sendSolicitud(solicitud);
-                  alert('Envíado con éxito'); 
-                  window.location.href = "/menu";
+                  alert('Envíado con éxito');
                 }}
               >
                 Enviar Solicitud
